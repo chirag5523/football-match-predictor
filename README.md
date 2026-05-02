@@ -1,44 +1,62 @@
-# ⚽ Football Match Predictor
+# ⚽ Arsenal FC Match Predictor
 
-A complete **Premier League Match Predictor** with web scraping, Firestore database, Machine Learning, and Streamlit dashboard.
+![Arsenal Logo](https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg)
+
+A complete **Premier League Match Predictor** with web scraping, Firestore database, Machine Learning, and an interactive Arsenal-themed dashboard.
+
+## 🌐 Live Demo
+**[→ View Live App](https://football-match-predictor-m8xc43djbwcubwov9xjla6.streamlit.app/)**  
+*(Replace this with your actual Streamlit Cloud link)*
 
 ## Features
-- Automated data scraping from FBref
-- Cloud Firestore as Data Warehouse
-- Machine Learning predictions (Win/Draw/Loss probabilities)
-- Interactive Streamlit Dashboard
-- Optional Arsenal-friendly theme & banter mode
+
+- Interactive Premier League Table with charts
+- Realistic ML Match Predictor (Win/Draw probabilities)
+- Arsenal Player Statistics
+- Clean Arsenal Red & White theme
+- Cloud Firestore integration
+- Fully deployed on Streamlit Cloud
 
 ## Tech Stack
-- **Python** • Pandas • Scikit-learn
-- **Firebase Firestore**
-- **Streamlit** (Dashboard)
-- **BeautifulSoup + requests** (Scraping)
+
+- **Frontend**: Streamlit + Plotly
+- **ML Model**: Random Forest (scikit-learn)
+- **Database**: Google Firestore
+- **Language**: Python
+- **Deployment**: Streamlit Cloud
+
+## Screenshots
+
+### League Table
+![League Table](screenshots/league-table.png)
+
+### Match Predictor
+![Match Predictor](screenshots/predictor.png)
+
+### Player Stats
+![Player Stats](screenshots/player-stats.png)
 
 ## Project Structure
 football-match-predictor/
-├── data/               # Raw & processed data
-├── notebooks/          # Jupyter notebooks for analysis
 ├── src/
-│   ├── scraper.py
-│   ├── firestore_utils.py
-│   ├── features.py
+│   ├── dashboard.py
 │   ├── model.py
-│   └── dashboard.py
-├── models/             # Saved ML models
-├── config/
+│   ├── scraper.py
+│   └── firestore_utils.py
+├── data/
+├── models/
+├── screenshots/
 ├── requirements.txt
-├── README.md
-└── run_scraper.py
+└── README.md
+text## How to Run Locally
 
+```bash
+git clone https://github.com/yourusername/football-match-predictor.git
+cd football-match-predictor
 
-## Setup Instructions
-1. Clone or download this repo
-2. `pip install -r requirements.txt`
-3. Setup Firebase Firestore (see below)
-4. Run `streamlit run src/dashboard.py`
+python -m venv venv
+venv\Scripts\activate     # Windows
+# source venv/bin/activate # Mac/Linux
 
-## Future Plans
-- Add Arsenal special highlights
-- Player impact metrics
-- Shot maps
+pip install -r requirements.txt
+streamlit run src/dashboard.py
