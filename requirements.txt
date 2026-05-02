@@ -1,0 +1,8 @@
+pandas
+requests
+beautifulsoup4
+firebase-admin
+scikit-learn
+streamlit
+pyyaml
+python-dotenv
